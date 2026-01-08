@@ -1,0 +1,42 @@
+name: nurbs-splatting
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+
+  - pip
+  - ninja
+  - setuptools
+  - wheel
+  - git
+
+  - numpy
+  - numba
+  - tqdm
+
+  - cuda-toolkit=13.0
+  - cudnn
+
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+
+      - torch==2.9.0+cu130
+      - torchvision==0.24.0+cu130
+
+      - trimesh
+      - plyfile
+      - imageio
+
+# set TORCH_CUDA_ARCH_LIST=8.6
+# set KMP_DUPLICATE_LIB_OK=TRUE
+# pip install git+https://github.com/NVlabs/nvdiffrast.git --no-build-isolation
+
+# conda env create -f environment.yml
+# conda env update --file environment.yml --prune
+# conda env remove -n nurbs-splatting
+
