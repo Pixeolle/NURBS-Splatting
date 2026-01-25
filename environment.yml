@@ -1,11 +1,10 @@
-name: nurbs-splatting
+oname: nurbs-splatting
 channels:
   - defaults
 dependencies:
   - anyio=4.10.0=py311haa95532_0
   - argon2-cffi=25.1.0=py311haa95532_0
   - argon2-cffi-bindings=25.1.0=py311h02ab6af_0
-  - asttokens=3.0.0=py311haa95532_0
   - async-lru=2.0.5=py311haa95532_0
   - attrs=25.4.0=py311haa95532_2
   - babel=2.17.0=py311haa95532_0
@@ -30,15 +29,14 @@ dependencies:
   - httpx=0.28.1=py311haa95532_1
   - idna=3.11=py311haa95532_0
   - ipykernel=6.31.0=py311h4442805_0
-  - ipython=9.7.0=py311haa95532_0
   - ipython_pygments_lexers=1.1.1=py311haa95532_0
   - jedi=0.19.2=py311haa95532_0
   - jinja2=3.1.6=py311haa95532_0
   - json5=0.12.1=py311haa95532_0
-  - jsonschema=4.25.0=py311haa95532_1
+  - jsonschema=4.25.1=py311haa95532_0
   - jsonschema-specifications=2025.9.1=py311haa95532_0
   - jupyter-lsp=2.2.5=py311haa95532_0
-  - jupyter_client=8.6.3=py311haa95532_1
+  - jupyter_client=8.8.0=py311haa95532_0
   - jupyter_core=5.9.1=py311haa95532_0
   - jupyter_events=0.12.0=py311haa95532_1
   - jupyter_server=2.17.0=py311haa95532_0
@@ -60,11 +58,9 @@ dependencies:
   - notebook-shim=0.2.4=py311haa95532_0
   - openssl=3.0.18=h543e019_0
   - overrides=7.7.0=py311haa95532_0
-  - packaging=25.0=py311haa95532_1
   - pandocfilters=1.5.1=py311haa95532_0
   - parso=0.8.5=py311haa95532_0
   - pip=25.3=pyhc872135_0
-  - platformdirs=4.5.0=py311haa95532_0
   - prometheus_client=0.21.1=py311haa95532_0
   - prompt-toolkit=3.0.52=py311haa95532_1
   - prompt_toolkit=3.0.52=hd3eb1b0_1
@@ -86,7 +82,7 @@ dependencies:
   - rfc3339-validator=0.1.4=py311haa95532_0
   - rfc3986-validator=0.1.1=py311haa95532_0
   - rpds-py=0.28.0=py311h114bc41_0
-  - send2trash=1.8.2=py311haa95532_1
+  - send2trash=1.8.3=py311haa95532_0
   - setuptools=80.9.0=py311haa95532_0
   - six=1.17.0=py311haa95532_0
   - sniffio=1.3.1=py311haa95532_0
@@ -100,12 +96,12 @@ dependencies:
   - traitlets=5.14.3=py311haa95532_0
   - typing-extensions=4.15.0=py311haa95532_0
   - typing_extensions=4.15.0=py311haa95532_0
+  - tzdata=2025c=he532380_0
   - ucrt=10.0.22621.0=haa95532_0
-  - urllib3=2.6.1=py311haa95532_0
+  - urllib3=2.6.3=py311haa95532_0
   - vc=14.3=h2df5915_10
   - vc14_runtime=14.44.35208=h4927774_10
   - vs2015_runtime=14.44.35208=ha6b5a95_10
-  - wcwidth=0.2.13=py311haa95532_0
   - webencodings=0.5.1=py311haa95532_1
   - websocket-client=1.8.0=py311haa95532_0
   - wheel=0.45.1=py311haa95532_0
@@ -116,32 +112,52 @@ dependencies:
   - zeromq=4.3.5=h6c54ac7_1
   - zlib=1.3.1=h02ab6af_0
   - pip:
-      - filelock==3.20.2
+      - asttokens==3.0.1
+      - beartype==0.22.9
+      - blinker==1.9.0
+      - click==8.3.1
+      - dataclasses-json==0.6.7
+      - deprecated==1.3.1
+      - entrypoints==0.4
+      - filelock==3.20.0
+      - flask==3.1.2
       - fsspec==2025.12.0
       - imageio==2.37.2
-      - markupsafe==3.0.3
+      - ipycanvas==0.14.3
+      - ipyevents==2.0.4
+      - ipython==9.9.0
+      - ipywidgets==8.1.8
+      - itsdangerous==2.2.0
+      - jaxtyping==0.3.6
+      - jupyter-client==7.4.9
+      - jupyterlab-widgets==3.0.16
+      - kaolin==0.18.0
+      - markupsafe==2.1.5
+      - marshmallow==3.26.2
       - mpmath==1.3.0
+      - mypy-extensions==1.1.0
       - narwhals==2.15.0
       - networkx==3.6.1
       - ninja==1.13.0
-      - numpy==2.4.0
+      - numpy==2.3.5
       - nvdiffrast==0.4.0
-      - pandas==2.3.3
-      - pillow==12.1.0
-      - plotly==6.5.1
-      - plyfile==1.1.3
-      - pytz==2025.2
+      - packaging==26.0
+      - pillow==12.0.0
+      - platformdirs==4.5.1
+      - plotly==6.5.2
+      - pybind11==3.0.1
+      - pygltflib==1.16.5
+      - scipy==1.17.0
       - sympy==1.14.0
-      - torch==2.9.0+cu130
-      - torchvision==0.24.0+cu130
-      - trimesh==4.10.1
-      - tzdata==2025.3
-
-# set TORCH_CUDA_ARCH_LIST=8.6
-# set KMP_DUPLICATE_LIB_OK=TRUE
-# pip install git+https://github.com/NVlabs/nvdiffrast.git --no-build-isolation
-
-# conda env create -f environment.yml
-# conda env update --file environment.yml --prune
-# conda env remove -n nurbs-splatting
-
+      - torch==2.8.0+cu129
+      - torchaudio==2.8.0+cu129
+      - torchvision==0.23.0+cu129
+      - tqdm==4.67.1
+      - typing-inspect==0.9.0
+      - usd-core==25.11
+      - wadler-lindig==0.1.7
+      - warp-lang==1.11.0
+      - wcwidth==0.3.0
+      - werkzeug==3.1.5
+      - widgetsnbextension==4.0.15
+      - wrapt==2.0.1
